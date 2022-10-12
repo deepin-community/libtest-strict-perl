@@ -1,0 +1,33 @@
+Source: libtest-strict-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Ansgar Burchardt <ansgar@debian.org>,
+           Florian Schlichting <fsfs@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 12)
+Build-Depends-Indep: perl,
+                     libdevel-cover-perl <!nocheck>,
+                     libio-stringy-perl <!nocheck>,
+                     libmoose-autobox-perl <!nocheck>,
+                     libtest-simple-perl <!nocheck>
+Standards-Version: 4.3.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libtest-strict-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libtest-strict-perl.git
+Homepage: https://metacpan.org/release/Test-Strict
+
+Package: libtest-strict-perl
+Architecture: all
+Depends: ${perl:Depends},
+         ${misc:Depends},
+         libdevel-cover-perl
+Description: test module for checking the syntax of use strict and test coverage
+ Test::Strict tests if the code compiles and inter-operates with
+ Test::Simple modules. Another good practice this module can test
+ is to "use strict;" in all perl files.
+ .
+ By setting a minimum test coverage through all_cover_ok(), a code
+ author can ensure his code is tested above a preset level of kwalitee
+ (CPAN quality metrics) throughout the development cycle. Along with
+ Test::Pod, this module can provide the first tests to setup for a
+ module author.

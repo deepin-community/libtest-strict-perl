@@ -1,0 +1,8 @@
+#!/bin/sh
+# these two files are created unconditionally by our autopkgtest runner,
+# but do not contain 'use strict' for now, thus causing the test to fail
+# => this should not be needed any more once pkg-perl-autopkgtest is fixed
+# (not yet as of 0.32)
+
+rm -f $TDIR/lib/Debian/pkgperl/Foobar.pm
+rm -f $TDIR/blib/lib/Debian/pkgperl/Foobar.pm
